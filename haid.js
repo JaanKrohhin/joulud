@@ -3,10 +3,19 @@ let ysamm=3, xsamm=0, ykiirendus=0.4;
 let t, g; //tahvel, graafiline kontekst
 let colors=["red","white","yellow","darkviolet","pink","darkviolet"];
 
+function allThings(){
+    clearCan();
+    tree();
+    garlands();
+    toys();
+    star();
+}
 function start(){
     t=document.getElementById("tahvel");
     g=t.getContext("2d");
-    tree();
+}
+function clearCan(){
+    g.clearRect(0, 0, t.width, t.height);
 }
 function tree(){
     g.clearRect(0, 0, t.width, t.height);
@@ -65,7 +74,6 @@ function tree(){
     g.stroke();
     g.fill();
     g.closePath();
-    garlands();
 }
 function garlands() {
 
@@ -100,7 +108,6 @@ function garlands() {
     g.bezierCurveTo((t.width-t.width/7)-60,t.height-140,(t.width-t.width/7)-120,t.height-170,(t.width-t.width/7)-250,t.height-270);
     g.stroke();
     g.closePath();
-    toys();
 }
 function toys(){
     g.beginPath()
@@ -132,24 +139,23 @@ function toys(){
     g.stroke();
     g.fill();
     g.closePath();
-    star()
 }
 function star(){
     g.beginPath()
     g.strokeStyle="yellow";
     g.fillStyle="yellow";
     g.lineWidth=1
-    g.moveTo(t.width/2,t.height-560);
-    g.lineTo(t.width-(t.width/7)*3-15,t.height-530);
-    g.lineTo(t.width-(t.width/7)*3+20,t.height-528);
-    g.lineTo(t.width-(t.width/7)*3-12,t.height-510);
-    g.lineTo(t.width-(t.width/7)*3,t.height-480);
-    g.lineTo(t.width/2,t.height-500);
-    g.lineTo(t.width/7*3,t.height-480);
-    g.lineTo(t.width/7*3+12,t.height-510);
-    g.lineTo(t.width/7*3-20,t.height-528);
-    g.lineTo(t.width/7*3+15,t.height-530);
-    g.lineTo(t.width/2,t.height-560);
+    g.moveTo(t.width/2,t.height-559);
+    g.lineTo(t.width-(t.width/7)*3-15,t.height-529);
+    g.lineTo(t.width-(t.width/7)*3+20,t.height-527);
+    g.lineTo(t.width-(t.width/7)*3-12,t.height-509);
+    g.lineTo(t.width-(t.width/7)*3,t.height-479);
+    g.lineTo(t.width/2,t.height-499);
+    g.lineTo(t.width/7*3,t.height-479);
+    g.lineTo(t.width/7*3+12,t.height-509);
+    g.lineTo(t.width/7*3-20,t.height-527);
+    g.lineTo(t.width/7*3+15,t.height-529);
+    g.lineTo(t.width/2,t.height-559);
     g.stroke();
     g.fill();
     g.closePath();

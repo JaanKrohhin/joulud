@@ -5,11 +5,18 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Häid Jõulud </title>
+    <title>LaLaLaLa LaLa La La</title>
     <script src="haid.js"></script>
-    <script src="snow.js"></script>
 </head>
 <body onload="start()">
-<canvas id="tahvel" width="400" height="600" style="background-color:lightblue"></canvas><br/>
+    <h1>Häid Jõulud</h1>
+    <canvas id="particle_canvas" width="400" height="600" style="background-color:lightblue;position: absolute; top: 150px"></canvas>
+    <canvas id="tahvel" width="400" height="600" style="background-color:lightblue;position: absolute; top: 150px "></canvas><br/>
+    <input type="button" onclick="allThings()" value="Joonista Kõik">
+    <input type="button" onclick="clearCan()" value="Kustuta">
+    <input type="button" onclick="tree()" value="Puu">
+    <input type="button" onclick="garlands()" value="Vanikud"><br>
+    <input type="button" onclick="toys()" value="Mänguasjad">
+    <input type="button" onclick="star()" value="Täht">
 </body>
 </html>
